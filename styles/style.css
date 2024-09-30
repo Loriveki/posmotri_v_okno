@@ -16,6 +16,11 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  /* Центрирование блока .content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 h1,
@@ -36,3 +41,232 @@ ul,
 ol {
   list-style: none;
 }
+
+.content {
+  max-width: 1200px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+  padding: 20px; 
+}
+
+.result {
+  flex: 2; 
+  margin-right: 20px;
+}
+
+.result__video-container {
+  position: relative; /* Относительное позиционирование */
+  width: 100%; /* Полная ширина */
+  height: auto; /* Автоматическая высота */
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+.result__video-container video {
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  object-fit: cover; /* Чтобы видео занимало весь контейнер без искажений */
+}
+
+/* Расположение элементов .search-form */
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px; /* Отступ между строками формы */
+}
+
+.search-form__fieldset{
+  border: none; /* Сбросим границу для fieldset */
+  padding: 0; /* Убираем отступы */
+  margin: 0; /* Убираем внешние отступы */
+}
+
+.search-form__fieldset-title{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 5px;
+}
+
+.search-form__label {
+  display: flex; 
+  align-items: center;
+  width: fit-content; 
+  cursor: pointer; 
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+
+.search-form__textfield {
+  appearance: none; 
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff; 
+  border-left: none; 
+  border-right: none; 
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: #1B1919;
+  color: rgba(255, 255, 255, 0.7);
+  flex-grow: 1; /* Инпут будет расширяться, занимая доступное пространство */
+  min-width: 225px; /* Минимальная ширина, чтобы текст не обрезался */ 
+}
+
+.search-form__checkbox-list {
+  display: flex; /* Упорядочиваем чекбоксы в строку */
+  gap: 10px; /* Отступы между чекбоксами */
+  align-items: center; 
+}
+
+.search-form__checkbox {
+  display: none; /* Скрываем оригинальный чекбокс */
+}
+
+.search-form__pseudo-checkbox {
+  width: 19px; /* Ширина псевдочекбокса */
+  height: 19px; /* Высота псевдочекбокса */
+  background-color: #1B1919;
+  border: 1px solid #fff; /* Граница */
+  cursor: pointer; /* Курсор указателя */
+  position: relative; /* Относительное позиционирование для внутренних элементов */
+}
+
+.search-form__label-text{
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  padding-left: 5px;
+}
+
+/* Стили для состояния включенного чекбокса */
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+  background-color: #fff; /* Цвет фона при включении */
+}
+
+.search-form__pseudo-checkbox::before {
+  content: ''; /* Создаем псевдоэлемент */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 50%; /* По центру по вертикали */
+  left: 50%; /* По центру по горизонтали */
+  width: 10px; /* Ширина внутреннего квадрата */
+  height: 10px; /* Высота внутреннего квадрата */
+  background-color: white; /* Цвет внутреннего квадрата */
+  transform: translate(-50%, -50%); /* Центрируем квадрат */
+  display: none; /* Скрываем по умолчанию */
+}
+
+/* Показываем внутренний квадрат при включении */
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  display: block; /* Показываем внутренний квадрат */
+}
+
+
+.search-form__submit-button {
+  padding: 6px 73px;
+  background-color:  #1B1919;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #fff;
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+
+
+.content__details {
+  flex: 1; /* Занимает оставшееся пространство */
+  display: flex;
+  flex-direction: column; /* Расположить элементы вертикально */
+  justify-content: flex-start; /* Прижать к началу */
+}
+
+.title {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+  margin-bottom: 20px; 
+}
+
+.content__accent {
+  color: #545050;
+}
+
+/* Вертикальный размер для .content__list */
+.content__list {
+  position: relative; /* Относительное позиционирование */
+  height: 300px; /* Задайте необходимую высоту */
+  overflow-y: auto; /* Скролл при переполнении */
+  margin-bottom: 10px; /* Вертикальный отступ */
+}
+
+.content__list-item:last-child {
+  margin-bottom: 0; /* Нет отступа у последнего */
+}
+
+.content__card-link {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: #fff;
+}
+
+.content__video-card {
+  display: flex; /* Flexbox для горизонтального размещения */
+  align-items: center; /* Вертикальное выравнивание */
+  margin-bottom: 20px; /* Отступ снизу для карточки */
+}
+
+.content__video-card-title {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16px;
+}
+
+.content__video-card-thumbnail {
+  width: 194px; 
+  height: 103px; 
+  overflow: hidden; 
+}
+
+.content__video-card-thumbnail img {
+  width: 100%; /* Полная ширина */
+  height: auto; /* Автоматическая высота */
+  object-fit: cover; /* Чтобы изображение занимало весь контейнер без искажений */
+}
+
+.content__video-card-description-container {
+  flex: 1; /* Занять всё доступное пространство */
+  padding-left: 10px; /* Отступ слева */
+}
+
