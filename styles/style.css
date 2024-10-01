@@ -13,7 +13,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   /* Центрирование блока .content */
@@ -42,47 +42,40 @@ ol {
 }
 
 .content {
-  max-width: 1140px; 
+  max-width: 1140px;
   display: flex;
   margin: auto;
   justify-content: center;
   align-items: end;
   gap: 30px;
-  padding: 0 0 145px;
+  padding: 114px 0px 102px;
 }
 
-
-
-/* Видео */
 .result__video-container {
-  position: relative; 
+  position: relative;
   width: 711px;
-  height: 386px; 
-  margin-bottom: 16px; 
+  height: 386px;
+  margin-bottom: 16px;
 }
 
 .result__video-container video {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-
-
-
-/* Поиск*/
 .search-form {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  font-family: 'Fira Sans Condensed';
+  font-family: "Fira Sans Condensed";
 }
 
-.search-form__fieldset{
-  border: none; 
+.search-form__fieldset {
+  border: none;
 }
 
-.search-form__fieldset-title{
+.search-form__fieldset-title {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -90,26 +83,24 @@ ol {
 }
 
 .search-form__label {
-  position: relative; 
+  position: relative;
   display: flex;
   align-items: center;
   width: fit-content;
   cursor: pointer;
-  border: 1px solid transparent; 
+  border: 1px solid transparent;
 }
-
 
 .search-form__label:has(.search-form__textfield:focus-visible)::after {
-  content: '';
+  content: "";
   position: absolute;
-  top: -2px; 
-  left: -2px; 
-  right: -2px; 
+  top: -2px;
+  left: -2px;
+  right: -2px;
   bottom: -2px;
-  border: 1px solid #fff; 
-  pointer-events: none; 
+  border: 1px solid #fff;
+  pointer-events: none;
 }
-
 
 .visually-hidden {
   position: absolute;
@@ -122,52 +113,48 @@ ol {
 }
 
 .search-form__textfield {
-  font-family: 'Fira Sans Condensed';
+  font-family: "Fira Sans Condensed";
   width: 225px;
-  appearance: none; 
+  appearance: none;
   border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff; 
-  border-left: none; 
-  border-right: none; 
+  border-bottom: 1px solid #fff;
+  border-left: none;
+  border-right: none;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  background-color: #1B1919;
+  background-color: #1b1919;
   color: rgba(255, 255, 255, 0.7);
   padding: 3px 0;
-  outline: none; 
+  outline: none;
 }
 
 .search-form__textfield:focus {
-  outline: none; 
+  outline: none;
 }
 
 .search-form__textfield:active {
-  border: 1px solid #fff; 
+  border: 1px solid #fff;
 }
-
-
-
-
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 15px; 
-  align-items: center; 
+  gap: 15px;
+  align-items: center;
 }
 
 .search-form__checkbox {
-  display: none; 
+  display: none;
 }
 
 .search-form__pseudo-checkbox {
-  width: 19px; 
-  height: 19px; 
-  background-color: #1B1919;
-  border: 1px solid #fff; 
-  cursor: pointer; 
-  position: relative; 
+  width: 19px;
+  height: 19px;
+  background-color: #1b1919;
+  border: 1px solid #fff;
+  cursor: pointer;
+  position: relative;
 }
 
 .search-form__label-text {
@@ -179,40 +166,37 @@ ol {
 }
 
 .search-form__label:hover .search-form__label-text {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   width: 15px;
   height: 15px;
-  background-color: #fff; 
+  background-color: #fff;
   transform: translate(-50%, -50%);
 }
 
 .search-form__label:has(.search-form__checkbox:focus-visible) {
-  border: 1px solid #fff; 
-  border-radius: 0; 
+  border: 1px solid #fff;
+  border-radius: 0;
   padding: 0 1px;
 }
 
 .search-form__checkbox:focus {
-  outline: none; 
+  outline: none;
 }
 
-
-
-
-.button{
+.button {
   position: relative;
-  background-color:  #1B1919;
+  background-color: #1b1919;
   color: #fff;
   cursor: pointer;
   border: 1px solid #fff;
-  font-family: 'Fira Sans Condensed';
+  font-family: "Fira Sans Condensed";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -232,15 +216,15 @@ ol {
 }
 
 .button:focus-visible {
-  outline: none; 
+  outline: none;
 }
 
 .button:focus-visible::after {
-  content: '';
+  content: "";
   position: absolute;
-  top: -3px; 
-  left: -3px; 
-  right: -3px; 
+  top: -3px;
+  left: -3px;
+  right: -3px;
   bottom: -3px; /* Создание отступа снизу */
   border: 1px solid #fff; /* Цвет и толщина обводки */
   pointer-events: none; /* Чтобы псевдоэлемент не блокировал клик */
@@ -251,24 +235,19 @@ ol {
   align-self: flex-end;
 }
 
-
-
-
-/*Контент*/
-
 .content__details {
   min-width: 399px;
   max-width: 416px;
 }
 
 .title {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-style: normal;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .content__accent {
@@ -276,31 +255,31 @@ ol {
 }
 
 .content__list {
-  position: relative; 
-  height: 300px; 
-  overflow-y: auto; 
+  position: relative;
+  height: 300px;
+  overflow-y: auto;
 }
 
 .content__list-item:last-child {
-  margin-bottom: 0; 
+  margin-bottom: 0;
 }
 
 .content__card-link {
   text-decoration: none;
   color: #fff;
-  display: block; 
-  margin: 2px; 
+  display: block;
+  margin: 2px;
 }
 
 .content__video-card {
-  display: flex; 
+  display: flex;
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 35px;
 }
 
 .content__video-card-title {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -309,10 +288,8 @@ ol {
   margin-bottom: 3px;
 }
 
-
-
 .content__video-card-description {
-  font-family: 'Fira Sans Condensed';
+  font-family: "Fira Sans Condensed";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -320,23 +297,19 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  height: 103px; 
-  overflow: hidden; 
+  height: 103px;
+  overflow: hidden;
 }
 
 .content__video-card-thumbnail img {
-  width: 100%; 
-  height: auto; 
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
 .content__video-card-description-container {
   padding-left: 3px;
 }
-
-
-
-
 
 .content__card-link_current {
   background-color: #545050;
@@ -347,25 +320,18 @@ ol {
 }
 
 .content__card-link:active {
-  background-color: #545050; 
+  background-color: #545050;
 }
 
-
 .content__card-link:focus {
-  outline: none; 
+  outline: none;
 }
 
 .content__card-link:focus-visible {
-  outline: 3px solid #fff; 
-  outline-offset: 2px; 
+  outline: 3px solid #fff;
+  outline-offset: 2px;
 }
 
-
-
-
-
-
-
-.more-button{
+.more-button {
   padding: 6px 136px;
 }
