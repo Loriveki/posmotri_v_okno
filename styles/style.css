@@ -46,9 +46,10 @@ ol {
   display: flex;
   margin: auto;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   gap: 30px;
-  padding: 114px 0px 102px;
+  padding-block: 110px 102px; 
+  padding-inline: 0; 
 }
 
 .result__video-container {
@@ -68,7 +69,7 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  font-family: "Fira Sans Condensed";
+  font-family: inherit;
 }
 
 .search-form__fieldset {
@@ -91,15 +92,8 @@ ol {
   border: 1px solid transparent;
 }
 
-.search-form__label:has(.search-form__textfield:focus-visible)::after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border: 1px solid #fff;
-  pointer-events: none;
+.search-form__label:has(.search-form__textfield:focus-visible) {
+  box-shadow: 0 0 0 1px #fff;
 }
 
 .visually-hidden {
@@ -113,20 +107,20 @@ ol {
 }
 
 .search-form__textfield {
-  font-family: "Fira Sans Condensed";
+  font-family: inherit;
   width: 225px;
   appearance: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  border-left: none;
-  border-right: none;
+  border-inline-start: none;
+  border-inline-end: none;
+  border-block-start: 1px solid #fff;
+  border-block-end: 1px solid #fff;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   background-color: #1b1919;
   color: rgba(255, 255, 255, 0.7);
-  padding: 3px 0;
+  padding-block: 3px;
   outline: none;
 }
 
@@ -135,7 +129,7 @@ ol {
 }
 
 .search-form__textfield:active {
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
 }
 
 .search-form__checkbox-list {
@@ -162,28 +156,29 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  padding: 4px 2px;
+  padding-block: 5px; 
+  padding-inline: 2px;
 }
 
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
+.search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
   width: 15px;
   height: 15px;
   background-color: #fff;
-  transform: translate(-50%, -50%);
 }
 
 .search-form__label:has(.search-form__checkbox:focus-visible) {
-  border: 1px solid #fff;
-  border-radius: 0;
-  padding: 0 1px;
+  outline: 1px solid #fff;
 }
 
 .search-form__checkbox:focus {
@@ -216,28 +211,20 @@ ol {
 }
 
 .button:focus-visible {
-  outline: none;
-}
-
-.button:focus-visible::after {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px; /* Создание отступа снизу */
-  border: 1px solid #fff; /* Цвет и толщина обводки */
-  pointer-events: none; /* Чтобы псевдоэлемент не блокировал клик */
+  outline: 1px solid #fff;
+  outline-offset: 2px;
 }
 
 .search-form__submit-button {
-  padding: 6px 73px;
+  padding-block: 6px;
+  padding-inline: 73px;
   align-self: flex-end;
 }
 
 .content__details {
   min-width: 399px;
   max-width: 416px;
+  min-height: 534px;
 }
 
 .title {
@@ -256,7 +243,7 @@ ol {
 
 .content__list {
   position: relative;
-  height: 300px;
+  max-height: 300px;
   overflow-y: auto;
 }
 
@@ -269,6 +256,15 @@ ol {
   color: #fff;
   display: block;
   margin: 2px;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .content__video-card {
@@ -285,11 +281,11 @@ ol {
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
-  margin-bottom: 3px;
+  margin-bottom: 6px;
 }
 
 .content__video-card-description {
-  font-family: "Fira Sans Condensed";
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -308,7 +304,8 @@ ol {
 }
 
 .content__video-card-description-container {
-  padding-left: 3px;
+  padding-block: 2px; 
+  padding-inline: 3px;
 }
 
 .content__card-link_current {
@@ -328,10 +325,11 @@ ol {
 }
 
 .content__card-link:focus-visible {
-  outline: 3px solid #fff;
+  outline: 1px solid #fff;
   outline-offset: 2px;
 }
 
 .more-button {
-  padding: 6px 136px;
+  padding-block: 6px;
+  padding-inline: 136px;
 }
