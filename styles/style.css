@@ -263,7 +263,6 @@ input[name="city"] {
   position: relative;
   max-block-size: 298px;
   overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .content__list-item {
@@ -278,7 +277,7 @@ input[name="city"] {
   text-decoration: none;
   color: #fff;
   display: block;
-  inline-size: 394px;
+  inline-size: 100%;
   block-size: 107px;
   margin: 2px 0;
 }
@@ -351,6 +350,6 @@ input[name="city"] {
 }
 
 .more-button {
-  width: 100%;
+  inline-size: 100%;
   block-size: 34px;
 }
