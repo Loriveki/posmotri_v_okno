@@ -1,13 +1,16 @@
+/* Настройки для всех элементов и псевдоэлементов */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Устанавливаем размеры для html */
 html {
   block-size: 100%;
 }
 
+/* Основные стили страницы */
 .page {
   inline-size: 1200px;
   block-size: 100%;
@@ -22,6 +25,7 @@ html {
   align-items: center;
 }
 
+/* Сброс отступов и паддингов для некоторых элементов */
 h1,
 h2,
 h3,
@@ -36,11 +40,13 @@ fieldset {
   padding: 0;
 }
 
+/* Убираем стандартные маркеры списка */
 ul,
 ol {
   list-style: none;
 }
 
+/* Стили для блока контента */
 .content {
   max-inline-size: 1140px;
   display: flex;
@@ -52,6 +58,7 @@ ol {
   padding-inline: 0;
 }
 
+/* Стиль для контейнера видео */
 .result__video-container {
   position: relative;
   inline-size: 711px;
@@ -66,6 +73,7 @@ ol {
   object-position: center;
 }
 
+/* Стили для формы поиска */
 .search-form {
   display: flex;
   justify-content: space-between;
@@ -73,10 +81,12 @@ ol {
   font-family: "Fira Sans Condensed", sans-serif;
 }
 
+/* Убираем рамку у fieldset */
 .search-form__fieldset {
   border: none;
 }
 
+/* Стили для заголовков внутри формы */
 .search-form__fieldset-title {
   font-style: normal;
   font-weight: 400;
@@ -84,6 +94,7 @@ ol {
   line-height: 22px;
 }
 
+/* Стили для меток формы */
 .search-form__label {
   position: relative;
   display: flex;
@@ -92,11 +103,13 @@ ol {
   border: 1px solid transparent;
 }
 
+/* Стили для выделения формы при фокусе */
 .search-form__label:has(.search-form__textfield:focus-visible),
 .search-form__label:focus-visible {
   outline: 1px solid #fff;
 }
 
+/* Стили для текста внутри метки */
 .search-form__label-text {
   font-style: normal;
   font-weight: 400;
@@ -106,10 +119,12 @@ ol {
   padding-inline: 3px;
 }
 
+/* Стили для текста метки при наведении */
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
+/* Скрытие элементов с классом visually-hidden */
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -120,6 +135,7 @@ ol {
   white-space: nowrap;
 }
 
+/* Стили для текстового поля */
 .search-form__textfield {
   font-family: inherit;
   inline-size: 225px;
@@ -143,11 +159,13 @@ input[name="city"] {
   margin: 3px 0;
 }
 
+/* Стили для плейсхолдера в текстовом поле */
 .search-form__textfield::placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
 
+/* Псевдокласс для выделенного поля */
 .search-form__textfield:focus {
   outline: none;
 }
@@ -156,12 +174,14 @@ input[name="city"] {
   outline: 1px solid #fff;
 }
 
+/* Стили для списка чекбоксов */
 .search-form__checkbox-list {
   display: flex;
   gap: 12px;
   align-items: center;
 }
 
+/* Стили для самих чекбоксов */
 .search-form__checkbox {
   appearance: none;
   clip-path: inset(0 0 100% 100%);
@@ -169,6 +189,7 @@ input[name="city"] {
   pointer-events: none;
 }
 
+/* Псевдоэлемент для отображения кастомного чекбокса */
 .search-form__pseudo-checkbox {
   inline-size: 19px;
   block-size: 19px;
@@ -201,6 +222,7 @@ input[name="city"] {
   outline: 1px solid #fff;
 }
 
+/* Стили для кнопки */
 .button {
   position: relative;
   background-color: #1b1919;
@@ -214,18 +236,22 @@ input[name="city"] {
   line-height: 22px;
 }
 
+/* Стили для кнопки при фокусе */
 .button:focus {
   outline: none;
 }
 
+/* Стили для кнопки при наведении */
 .button:hover {
   text-decoration: underline;
 }
 
+/* Стили для кнопки при активации */
 .button:active {
   background-color: #545050;
 }
 
+/* Стили для кнопки при фокусе */
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
@@ -239,12 +265,14 @@ input[name="city"] {
   top: -2px;
 }
 
+/* Стили для блока с деталями контента */
 .content__details {
   min-inline-size: 399px;
   max-inline-size: 416px;
   min-block-size: 534px;
 }
 
+/* Стили для заголовка */
 .title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -255,16 +283,19 @@ input[name="city"] {
   margin-block-end: 20px;
 }
 
+/* Стили для акцента в контенте */
 .content__accent {
   color: #545050;
 }
 
+/* Стили для списка контента */
 .content__list {
   position: relative;
   max-block-size: 298px;
   overflow-y: auto;
 }
 
+/* Стили для элементов списка */
 .content__list-item {
   margin-block-end: 32px;
 }
@@ -273,6 +304,7 @@ input[name="city"] {
   margin-block-end: 0;
 }
 
+/* Стили для ссылок карточек */
 .content__card-link {
   text-decoration: none;
   color: #fff;
@@ -282,6 +314,7 @@ input[name="city"] {
   margin: 2px 0;
 }
 
+/* Стили для ссылок карточек при фокусе */
 .content__card-link:focus {
   outline: none;
 }
@@ -295,6 +328,7 @@ input[name="city"] {
   background-color: #545050;
 }
 
+/* Стили для ссылок карточек при наведении */
 .content__card-link:hover {
   text-decoration: underline;
 }
@@ -303,16 +337,19 @@ input[name="city"] {
   background-color: #545050;
 }
 
+/* Стили для видео карточки */
 .content__video-card {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
 
+/* Стили для описания карточки */
 .content__video-card-description-container {
   padding: 2px;
 }
 
+/* Стили для заголовка в карточке */
 .content__video-card-title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -327,6 +364,7 @@ input[name="city"] {
   text-overflow: ellipsis;
 }
 
+/* Стили для описания в карточке */
 .content__video-card-description {
   font-family: inherit;
   font-style: normal;
@@ -335,6 +373,7 @@ input[name="city"] {
   line-height: 16px;
 }
 
+/* Стили для миниатюры карточки */
 .content__video-card-thumbnail {
   block-size: 103px;
   inline-size: 194px;
@@ -349,6 +388,7 @@ input[name="city"] {
   block-size: 100%;
 }
 
+/* Стили для кнопки "Показать еще" */
 .more-button {
   inline-size: 100%;
   block-size: 34px;

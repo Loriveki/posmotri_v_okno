@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <!-- Метаданные страницы -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Посмотри в окно</title>
+    <!-- Подключение шрифтов и стилей -->
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/preloader.css" />
@@ -13,9 +15,11 @@
   <body class="page">
     <main class="content">
       <section class="result">
+        <!-- Контейнер для видео -->
         <div class="result__video-container">
           <video src="" controls class="result__video" poster=""></video>
         </div>
+        <!-- Форма поиска с полями для города и времени суток -->
         <form class="search-form">
           <fieldset class="search-form__fieldset">
             <h2 class="search-form__fieldset-title">Город</h2>
@@ -32,6 +36,7 @@
           <fieldset class="search-form__fieldset">
             <h2 class="search-form__fieldset-title">Время суток</h2>
             <div class="search-form__checkbox-list">
+              <!-- Чекбоксы для выбора времени суток -->
               <label class="search-form__label">
                 <input
                   type="checkbox"
@@ -69,6 +74,7 @@
           </button>
         </form>
       </section>
+      <!-- Секция с заголовком и списком карточек -->
       <section class="content__details">
         <h1 class="title">
           <span class="content__accent">По-</span><br />смотри<br />в окно
@@ -81,6 +87,7 @@
 
     <!-- ТЕМПЛЕЙТЫ -->
 
+    <!-- Шаблон для прелоадера -->
     <template class="preloader-template">
       <div class="preloader">
         <div class="preloader-chasing-squares">
@@ -92,6 +99,7 @@
       </div>
     </template>
 
+    <!-- Шаблон для карточки (ссылка на видео) -->
     <template class="cards-list-item-template">
       <li class="content__list-item">
         <a href="#0" class="content__card-link">
@@ -105,15 +113,17 @@
         </a>
       </li>
     </template>
+    <!-- Шаблон для кнопки "Показать еще" -->
     <template class="more-button-template">
       <li><button class="button more-button">Показать еще</button></li>
     </template>
-
+    <!-- Шаблон для отображения ошибок -->
     <template class="error-template">
       <div class="error">
         <h2 class="error__title"></h2>
       </div>
     </template>
+    <!-- Подключение скрипта -->
     <script src="./scripts/script.js"></script>
   </body>
 </html>
